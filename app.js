@@ -9,6 +9,8 @@ const RESULT_COMPUTER_WINS = "COMPUTER_WINS";
 const startGameBtn = document.getElementById("start-game-btn");
 let gameRunning = false;
 
+// Player Choice
+
 const getPlayerChoice = function () {
   const selection = prompt(
     `Please enter your choice ${ROCK}, ${PAPER} or ${SCISSOR}`,
@@ -25,6 +27,8 @@ const getPlayerChoice = function () {
   return selection;
 };
 
+// Computer Choice
+
 const getComputerChoice = function () {
   const randomNo = Math.random();
   if (randomNo < 0.34) {
@@ -35,6 +39,8 @@ const getComputerChoice = function () {
     return SCISSOR;
   }
 };
+
+// Winner Function
 
 const getWinner = function (pChoice, cChoice) {
   if (pChoice === cChoice) {
